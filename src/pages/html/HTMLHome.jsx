@@ -54,6 +54,20 @@ const HTMLHome = () => {
                         Try it Yourself »
                     </button>
                 </div>
+                <h5 className="ms-5 mt-4 fs-6">Click on the "Try it Yourself" button to see how it works.</h5>
+
+                <hr className="my-3 mx-3 text-secondary" />
+
+                <div className="ps-4 mt-4">
+                    <p className="fs-3">HTML Examples</p>
+                    <p className="fs-6">
+                        In this HTML tutorial, you will find more than 200 examples. With our online "Try it Yourself" editor, you can edit and test each example yourself!
+                    </p>
+                    <button className="btn btn-secondary">Go to HTML Examples!</button>
+                </div>
+
+                <hr className="my-3 mx-3 text-secondary" />
+
             </div>
         </div>
     );
