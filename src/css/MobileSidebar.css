@@ -1,0 +1,28 @@
+.offcanvas {
+    width: 250px !important;
+}
+
+.mobileSidebar {
+    background-color: #15202b;
+    overflow-y: scroll;
+}
+
+.mobileSidebar::-webkit-scrollbar {
+    width: 0.9rem;
+}
+
+.mobileSidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mobileSidebar::-webkit-scrollbar-thumb {
+    background: #29353e;
+}
+
+.nav-link:hover {
+    background-color: #000;
+}
+
+.nav-link.active {
+    background-color: #04aa6d;
+}

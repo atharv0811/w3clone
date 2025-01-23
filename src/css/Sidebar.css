@@ -1,0 +1,27 @@
+.sidebar {
+    width: 250px;
+    background-color: #15202b;
+    min-height: calc(100vh - 98.667px);
+    height: calc(100vh - 98.667px);
+    overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 0.9rem;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #29353e;
+}
+
+.nav-link:hover {
+    background-color: #000;
+}
+
+.nav-link.active {
+    background-color: #04aa6d;
+}

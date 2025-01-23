@@ -1,0 +1,34 @@
+.mainchild {
+    background-color: #1d2a35;
+    overflow-y: auto;
+    min-height: calc(100vh - 98.667px);
+    height: calc(100vh - 98.667px);
+}
+
+.mainchild::-webkit-scrollbar {
+    width: 0.9rem;
+}
+
+.mainchild::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mainchild::-webkit-scrollbar-thumb {
+    background: #29353e;
+}
+
+
+
+/* +++++++++++++ SubNav ++++++++++++++ */
+
+.subnavhover:hover {
+    background-color: #14161c;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+
+/* +++++++++++++ SubNav ++++++++++++++ */
