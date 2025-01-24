@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
     { title: "HTML", href: "/html" },
+    { title: "React", href: "/react" },
     { title: "CSS", href: "/css" },
     { title: "JavaScript", href: "/js" },
-    { title: "React", href: "/react" },
     { title: "Bootstrap", href: "/bootstrap" },
 ];
 

@@ -4,7 +4,6 @@ import "../css/MobileSidebar.css";
 
 const MobileSidebar = () => {
     const location = useLocation();
-    console.log(location);
 
     const currentCourse =
         sidebarData.find((course) => location.pathname.startsWith(course.path)) ||
@@ -19,7 +18,7 @@ const MobileSidebar = () => {
             aria-labelledby="offcanvasWithBothOptionsLabel"
         >
             <div
-                className="mobileSidebar"
+                className="h-100 mobileSidebar"
             >
                 <div className="py-3">
                     {currentCourse.pages.map((nav) => {

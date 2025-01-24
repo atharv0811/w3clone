@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
             <div className="d-flex">
                 <Sidebar />
                 <MobileSidebar />
-                <main className="w-100 mainchild">
+                <main className="w-100 mainchild no-scrollbar">
                     {children}
                 </main>
             </div>

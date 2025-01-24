@@ -41,7 +41,7 @@ const TopNav = () => {
                                 placeholder="Search..."
                             />
                             <Search
-                                className="position-absolute end-0 top-50 translate-middle-y me-2 text-white search-icon"
+                                className="position-absolute end-0 top-50 translate-middle-y me-2 search-icon"
                             />
                         </div>
                         <Moon className="text-white moon" />

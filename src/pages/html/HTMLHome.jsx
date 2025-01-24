@@ -1,73 +1,76 @@
 import React from "react";
+import Navigation from "../../components/Navigation";
+import ContentSection from "../../components/ContentSection";
+import CodeExample from "../../components/Code";
+import ExerciseCard from "../../components/ExersiceCard";
+import {
+    codeSnippet,
+    contentItems,
+    exerciseOptions,
+    exerciseQuestion,
+} from "../../data/html/htmlHome";
 
 const HTMLHome = () => {
     return (
-        <div className="mt-4 text-white">
+        <div className="my-4 text-white">
             <h1 className="mb-4 ps-4">HTML Tutorial</h1>
-            <div className="content mb-5">
-                <div className="p-4" style={{ backgroundColor: "#193d3d" }}>
-                    <ul className="m-0 p-0">
-                        <li className="list-unstyled mb-4">
-                            HTML is the standard markup language for Web pages.
-                        </li>
-                        <li className="list-unstyled mb-4">
-                            With HTML you can create your own Website.
-                        </li>
-                        <li className="list-unstyled mb-4">
-                            HTML is easy to learn - You will enjoy it!
-                        </li>
-                    </ul>
-                    <button className="btn btn-success">Start Learning HTML Now »</button>
-                </div>
+            <Navigation />
 
-                <hr className="my-3 mx-3 text-secondary" />
+            <ContentSection
+                backgroundColor="#193d3d"
+                content={contentItems}
+                buttonText="Start Learning HTML Now »"
+            />
 
-                <div className="ps-4 mt-4">
-                    <p className="fs-3">Easy Learning with HTML "Try it Yourself"</p>
-                    <p className="fs-6">
-                        With our "Try it Yourself" editor, you can edit the HTML code and
-                        view the result:
-                    </p>
-                </div>
+            <hr className="my-3 mx-3 text-secondary" />
 
-                <div className="card bg-secondary text-white mt-4 mx-4 px-3 py-3">
-                    <h5>Example</h5>
-                    <div className="bg-dark p-4 rounded mb-3">
-                        <pre>
-                            <code>
-                                {`<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+            <div className="px-4 mt-4">
+                <h2 className="fs-2 fw-light">Easy Learning with HTML "Try it Yourself"</h2>
+                <p className="fs-6">
+                    With our "Try it Yourself" editor, you can edit the HTML code and view
+                    the result:
+                </p>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+                <CodeExample
+                    code={codeSnippet}
+                    title="Example"
+                    buttonText="Try it Yourself »"
+                />
+                <p className="fw-medium my-3 ms-3">
+                    Click on the "Try it Yourself" button to see how it works.
+                </p>
+            </div>
 
-</body>
-</html>`}
-                            </code>
-                        </pre>
-                    </div>
-                    <button className="btn btn-success" style={{ width: '167px' }}>
-                        Try it Yourself »
-                    </button>
-                </div>
-                <h5 className="ms-5 mt-4 fs-6">Click on the "Try it Yourself" button to see how it works.</h5>
+            <hr className="my-3 mx-3 text-secondary" />
 
-                <hr className="my-3 mx-3 text-secondary" />
+            <div className="px-4 mt-4">
+                <p className="fs-3">HTML Examples</p>
+                <p className="fs-6">
+                    In this HTML tutorial, you will find more than 200 examples. With our
+                    online "Try it Yourself" editor, you can edit and test each example
+                    yourself!
+                </p>
+                <button className="btn btn-secondary">Go to HTML Examples!</button>
+            </div>
 
-                <div className="ps-4 mt-4">
-                    <p className="fs-3">HTML Examples</p>
-                    <p className="fs-6">
-                        In this HTML tutorial, you will find more than 200 examples. With our online "Try it Yourself" editor, you can edit and test each example yourself!
-                    </p>
-                    <button className="btn btn-secondary">Go to HTML Examples!</button>
-                </div>
+            <hr className="my-3 mx-3 text-secondary" />
 
-                <hr className="my-3 mx-3 text-secondary" />
+            <div className="px-4 mt-4">
+                <p className="fs-3">HTML Exercises</p>
+                <p className="fs-6">
+                    Many chapters in this tutorial end with an exercise where you can
+                    check your level of knowledge.
+                </p>
 
+                <ExerciseCard
+                    question={exerciseQuestion}
+                    options={exerciseOptions}
+                    width="auto"
+                />
+
+                <button className="btn btn-success mt-3 fw-medium">
+                    See all HTML Exercises
+                </button>
             </div>
         </div>
     );
