@@ -7,7 +7,7 @@ import {
     whatIsHTML,
     exerciseOptions,
     exerciseQuestion,
-} from "../../data/htmlIntroData";
+} from "../../data/html/htmlIntroData";
 import NoteCard from "../../components/NoteCard";
 import ExerciseCard from "../../components/ExersiceCard";
 
