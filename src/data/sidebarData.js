@@ -1,7 +1,7 @@
 const sidebarData = [
     {
-        id: 'html',
-        path: '/html',
+        id: "html",
+        path: "/html",
         pages: [
             {
                 heading: "HTML Tutorial",
@@ -13,6 +13,16 @@ const sidebarData = [
                     { title: "HTML Elements", href: "/html-elements" },
                     { title: "HTML Attributes", href: "/html-attributes" },
                     { title: "HTML Headings", href: "/html-headings" },
+                    {
+                        title: "HTML Colors",
+                        href: "/html-colors",
+                        subItems: [
+                            { title: "Colors", href: "/html-colors/colors" },
+                            { title: "RGB", href: "/html-colors/rgb" },
+                            { title: "HEX", href: "/html-colors/hex" },
+                            { title: "HSL", href: "/html-colors/hsl" },
+                        ],
+                    },
                 ],
             },
             {
@@ -23,14 +33,17 @@ const sidebarData = [
                     { title: "HTML Form Elements", href: "/html-form-elements" },
                     { title: "HTML Input Types", href: "/html-input-types" },
                     { title: "HTML Input Attributes", href: "/html-input-attributes" },
-                    { title: "Input Form Attributes", href: "/html-input-form-attributes" },
+                    {
+                        title: "Input Form Attributes",
+                        href: "/html-input-form-attributes",
+                    },
                 ],
             },
-        ]
+        ],
     },
     {
-        id: 'css',
-        path: '/css',
+        id: "css",
+        path: "/css",
         pages: [
             {
                 heading: "CSS Tutorial",
@@ -55,11 +68,11 @@ const sidebarData = [
                     { title: "CSS Gradients", href: "/css-gradients" },
                 ],
             },
-        ]
+        ],
     },
     {
-        id: 'js',
-        path: '/js',
+        id: "js",
+        path: "/js",
         pages: [
             {
                 heading: "JS Tutorial",
@@ -84,11 +97,11 @@ const sidebarData = [
                     { title: "Object Protection", href: "/js-protection" },
                 ],
             },
-        ]
+        ],
     },
     {
-        id: 'react',
-        path: '/react',
+        id: "react",
+        path: "/react",
         pages: [
             {
                 heading: "React Tutorial",
@@ -116,11 +129,11 @@ const sidebarData = [
                     { title: "Custom Hooks", href: "/react-custom-hooks" },
                 ],
             },
-        ]
+        ],
     },
     {
-        id: 'bootstrap',
-        path: '/bootstrap',
+        id: "bootstrap",
+        path: "/bootstrap",
         pages: [
             {
                 heading: "Bootstrap 5 Tutorial",
@@ -146,8 +159,8 @@ const sidebarData = [
                     { title: "BS5 Form Validation", href: "/bootstrap-form-validation" },
                 ],
             },
-        ]
+        ],
     },
-]
+];
 
 export default sidebarData;

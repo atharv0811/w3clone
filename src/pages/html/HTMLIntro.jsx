@@ -26,7 +26,7 @@ const HTMLIntro = () => {
             <hr className="my-3 mx-3 text-secondary" />
 
             <div className="px-4 mt-4">
-                <p className="fs-2">What is HTML?</p>
+                <h2 className="fs-2 fw-light">What is HTML?</h2>
                 <ul className="ms-3">
                     {whatIsHTML.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -37,7 +37,7 @@ const HTMLIntro = () => {
             <hr className="my-3 mx-3 text-secondary" />
 
             <div className="px-4 mt-4">
-                <p className="fs-2">A Simple HTML Document</p>
+                <h2 className="fs-2 fw-light">A Simple HTML Document</h2>
 
                 <CodeExample
                     code={codeSnippet}
@@ -47,7 +47,7 @@ const HTMLIntro = () => {
             </div>
 
             <div className="px-4 mt-3">
-                <h4 className="fw-light">Example Explained</h4>
+                <h2 className="fs-2 fw-light">Example Explained</h2>
 
                 <ul className="ms-3">
                     {exampleExplanation.map((item, index) => (
@@ -66,7 +66,7 @@ const HTMLIntro = () => {
             <hr className="my-3 mx-3 text-secondary" />
 
             <div className="px-4 mt-4">
-                <p className="fs-2">Web Browsers</p>
+                <h2 className="fs-2 fw-light">Web Browsers</h2>
                 <p>
                     The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to
                     read HTML documents and display them correctly.

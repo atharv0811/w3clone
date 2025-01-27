@@ -5,8 +5,7 @@ const learnHTMLPoints = [
     "Follow the steps below to create your first web page with Notepad or TextEdit.",
 ]
 
-const codeSnippet = `
-<!DOCTYPE html>
+const codeSnippet = `<!DOCTYPE html>
 <html>
 <body>
 

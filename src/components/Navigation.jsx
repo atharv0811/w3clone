@@ -8,15 +8,24 @@ const Navigation = () => {
 
     const sections = sidebarData.map((section) => ({
         title: section.title,
-        links: section.pages.flatMap((page) => page.navLinks),
+        links: section.pages.flatMap((page) =>
+            page.navLinks.flatMap((link) => {
+                if (link.subItems) {
+                    return [link, ...link.subItems.map((subLink) => ({ ...subLink, parentHref: link.href }))];
+                }
+                return [link];
+            })
+        ),
     }));
 
     const currentSection = sections.find((section) =>
-        section.links.some((link) => link.href === location.pathname)
+        section.links.some((link) => link.href === location.pathname || (link.parentHref && location.pathname.startsWith(link.parentHref)))
     );
 
     const currentIndex = currentSection
-        ? currentSection.links.findIndex((link) => link.href === location.pathname)
+        ? currentSection.links.findIndex((link) =>
+            link.href === location.pathname || (link.parentHref && location.pathname.startsWith(link.parentHref))
+        )
         : -1;
 
     const previousLink =
@@ -30,8 +39,7 @@ const Navigation = () => {
         <div className="container-fluid mt-4">
             <div className="d-flex justify-content-between my-4 mx-2">
                 <button
-                    className={`btn btn-${previousLink ? "success" : "secondary"} ${!previousLink && "disabled"
-                        }`}
+                    className={`btn btn-${previousLink ? "success" : "secondary"} ${!previousLink && "disabled"}`}
                     onClick={() => previousLink && navigate(previousLink.href)}
                     disabled={!previousLink}
                 >
@@ -39,8 +47,7 @@ const Navigation = () => {
                 </button>
 
                 <button
-                    className={`btn btn-${nextLink ? "success" : "secondary"} ${!nextLink && "disabled"
-                        }`}
+                    className={`btn btn-${nextLink ? "success" : "secondary"} ${!nextLink && "disabled"}`}
                     onClick={() => nextLink && navigate(nextLink.href)}
                     disabled={!nextLink}
                 >

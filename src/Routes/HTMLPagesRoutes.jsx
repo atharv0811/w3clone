@@ -13,6 +13,7 @@ import HTMLFormElements from '../pages/html/HTMLFormElements'
 import HTMLInputTypes from '../pages/html/HTMLInputTypes'
 import HTMLInputAttributes from '../pages/html/HTMLInputAttributes'
 import InputFormAttributes from '../pages/html/InputFormAttributes'
+import HTMLColors from '../pages/html/HTMLColors'
 
 const HTMLPagesRoutes = () => {
     return (
@@ -24,6 +25,7 @@ const HTMLPagesRoutes = () => {
             <Route path='/html-elements' element={<HTMLElements />} />
             <Route path='/html-attributes' element={<HTMLAttributes />} />
             <Route path='/html-headings' element={<HTMLHeadings />} />
+            <Route path='/html-colors' element={<HTMLColors />} />
             <Route path='/html-forms' element={<HTMLForms />} />
             <Route path='/html-form-attributes' element={<HTMLFormAttributes />} />
             <Route path='/html-form-elements' element={<HTMLFormElements />} />
