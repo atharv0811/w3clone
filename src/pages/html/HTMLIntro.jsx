@@ -13,7 +13,7 @@ import ExerciseCard from "../../components/ExersiceCard";
 
 const HTMLIntro = () => {
     return (
-        <div className="mt-4 text-white">
+        <div className="mt-4" style={{ color: 'var(--text-color)' }}>
             <h1 className="mb-4 ps-4">HTML Introduction</h1>
             <Navigation />
 

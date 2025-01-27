@@ -11,7 +11,6 @@ const sidebarData = [
                     { title: "HTML Editors", href: "/html-editors" },
                     { title: "HTML Basics", href: "/html-basics" },
                     { title: "HTML Elements", href: "/html-elements" },
-                    { title: "HTML Attributes", href: "/html-attributes" },
                     { title: "HTML Headings", href: "/html-headings" },
                     {
                         title: "HTML Colors",

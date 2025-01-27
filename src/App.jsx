@@ -3,7 +3,6 @@ import Layout from "./Layout"
 import ReactRoutes from "./Routes/ReactPagesRoutes"
 import HTMLPagesRoutes from "./Routes/HTMLPagesRoutes"
 
-
 function App() {
   return (
     <BrowserRouter>

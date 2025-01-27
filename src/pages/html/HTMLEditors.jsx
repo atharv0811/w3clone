@@ -6,7 +6,7 @@ import NoteCard from "../../components/NoteCard";
 
 const HTMLEditors = () => {
     return (
-        <div className="mt-4 text-white">
+        <div className="mt-4" style={{ color: 'var(--text-color)' }}>
             <h1 className="mb-4 ps-4">HTML Editors</h1>
             <Navigation />
 

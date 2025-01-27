@@ -12,12 +12,11 @@ import {
 
 const HTMLHome = () => {
     return (
-        <div className="my-4 text-white">
+        <div className="my-4" style={{ color: 'var(--text-color)' }}>
             <h1 className="mb-4 ps-4">HTML Tutorial</h1>
             <Navigation />
 
             <ContentSection
-                backgroundColor="#193d3d"
                 content={contentItems}
                 buttonText="Start Learning HTML Now »"
             />

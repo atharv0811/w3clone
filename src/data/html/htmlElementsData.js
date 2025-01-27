@@ -26,7 +26,15 @@ const htmlElementsData = {
             "The <p> element defines a paragraph.",
             "It has a start tag <p> and an end tag </p>:",
         ]
-    }
+    },
+
+    neverSkipEndExample:`<html>\n<body>\n\n<p>This is a paragraph\n<p>This is a paragraph\n\n</body>\n\</html>`,
+
+    exerciseQuestion:'True or False. Empty elements must have a close tag.',
+    exerciseOptions:[
+        'True',
+        'False'
+    ]
 }
 
 export default htmlElementsData

@@ -1,7 +1,15 @@
-import { ChevronDown, ChevronRight, Code, Moon, Search, ShoppingCart } from "lucide-react";
-import "../css/TopNav.css";
+import { ChevronDown, ChevronRight, Code, Moon, Search, ShoppingCart, Sun } from "lucide-react";
+import { useState } from "react";
 
 const TopNav = () => {
+    const [theme, setTheme] = useState('light')
+
+    const handleToggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        document.documentElement.setAttribute('data-theme', newTheme)
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg px-3 d-flex justify-content-between py-0 top-nav">
@@ -9,27 +17,28 @@ const TopNav = () => {
                     <img src="/logo.svg" alt="logo" className="logo mx-2 my-2" />
 
                     <span
-                        className="text-white d-lg-none py-3 px-2 menu"
+                        className="d-lg-none py-3 px-2 menu"
                         data-bs-toggle="collapse"
                         href="#collapseDropdown"
                         role="button"
                         aria-expanded="false"
                         aria-controls="collapseDropdown"
+                        style={{ color: 'var(--text-color)' }}
                     >
                         Menu <ChevronDown />
                     </span>
 
                     <ul className="m-0 p-0 d-none d-lg-flex align-items-center ms-2">
-                        <li className="list-unstyled text-white py-3 px-2 topnavleft">
+                        <li className="list-unstyled py-3 px-2 topnavleft">
                             Tutorials <ChevronDown />
                         </li>
-                        <li className="list-unstyled text-white py-3 px-2 topnavleft">
+                        <li className="list-unstyled py-3 px-2 topnavleft">
                             Exercises <ChevronDown />
                         </li>
-                        <li className="list-unstyled text-white py-3 px-2 topnavleft">
+                        <li className="list-unstyled py-3 px-2 topnavleft">
                             Certificates <ChevronDown />
                         </li>
-                        <li className="list-unstyled text-white py-3 px-2 topnavleft">
+                        <li className="list-unstyled py-3 px-2 topnavleft">
                             Services <ChevronDown />
                         </li>
                     </ul>
@@ -44,18 +53,25 @@ const TopNav = () => {
                                 className="position-absolute end-0 top-50 translate-middle-y me-2 search-icon"
                             />
                         </div>
-                        <Moon className="text-white moon" />
+                        {
+                            theme === 'light' ? (
+                                <Moon className="moon" onClick={handleToggleTheme} />
+                            ) : (
+                                <Sun className="text-white sun" onClick={handleToggleTheme} />
+                            )
+                        }
+
                     </div>
                 </div>
 
                 <div className="d-flex align-items-center gap-2">
                     <div className="d-none d-xl-block align-items-center gap-2">
                         <ul className="d-flex align-items-center m-0 p-0">
-                            <li className="text-white list-unstyled d-flex align-items-center px-3 py-1 topnavright">
+                            <li className="list-unstyled d-flex align-items-center px-3 py-1 topnavright">
                                 <Code className="me-2 mt-1 spaces-icon" />
                                 Spaces
                             </li>
-                            <li className="text-white list-unstyled d-flex align-items-center px-3 py-1 topnavright">
+                            <li className="list-unstyled d-flex align-items-center px-3 py-1 topnavright">
                                 <ShoppingCart className="me-2 mt-1 cart-icon" />
                                 Get Certified
                             </li>

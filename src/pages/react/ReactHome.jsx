@@ -15,13 +15,13 @@ import {
 
 const ReactHome = () => {
     return (
-        <div className="my-4 text-white">
+        <div className="my-4" style={{ color: 'var(--text-color)' }}>
             <h1 className="mb-4 ps-4">React Tutorial</h1>
             <Navigation />
 
             <ContentSection
                 backgroundColor="#f3ecea"
-                textColor="#000"
+                color="#000"
                 content={contentItems}
                 buttonText="Start Learning HTML Now »"
             />

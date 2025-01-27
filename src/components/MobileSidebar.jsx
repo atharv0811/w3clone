@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import sidebarData from "../data/sidebarData";
-import "../css/MobileSidebar.css";
 
 const MobileSidebar = () => {
   const [expanded, setExpanded] = useState({});
@@ -31,7 +30,7 @@ const MobileSidebar = () => {
         <div className="py-3">
           {currentCourse.pages.map((nav, navIdx) => (
             <div key={nav.heading} className="mb-4">
-              <h5 className="text-white mb-3 px-3">{nav.heading}</h5>
+              <h5 className="mb-3 px-3" style={{ color: 'var(--text-color)' }}>{nav.heading}</h5>
               <ul className="nav flex-column">
                 {nav.navLinks.map((link, idx) => (
                   <div key={idx}>
@@ -39,7 +38,7 @@ const MobileSidebar = () => {
                       <>
                         <NavLink
                           to={link.href}
-                          className="nav-link text-white text-decoration-none"
+                          className="nav-link text-decoration-none"
                           onClick={(e) => handleToggle(`${navIdx}-${idx}`)}
                         >
                           <li className="nav-item ms-4">
@@ -56,7 +55,7 @@ const MobileSidebar = () => {
                               <NavLink
                                 key={subIdx}
                                 to={`${subLink.href}`}
-                                className="nav-link text-white text-decoration-none sub-nav-link"
+                                className="nav-link text-decoration-none sub-nav-link"
                               >
                                 <li className="nav-item mx-4">
                                   {subLink.title}
@@ -69,7 +68,7 @@ const MobileSidebar = () => {
                     ) : (
                       <NavLink
                         to={link.href}
-                        className="nav-link text-white text-decoration-none"
+                        className="nav-link text-decoration-none"
                       >
                         <li className="nav-item mx-4">{link.title}</li>
                       </NavLink>
