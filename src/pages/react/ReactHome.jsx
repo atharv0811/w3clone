@@ -39,7 +39,6 @@ const ReactHome = () => {
                 <CodeExample
                     code={codeSnippet}
                     title="Example"
-                    buttonText="Run Example »"
                 />
             </div>
 

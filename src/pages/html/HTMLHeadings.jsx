@@ -30,7 +30,6 @@ const HTMLHeadings = () => {
             <div className="px-4 mt-4">
                 <CodeExample
                     title={"Example"}
-                    buttonText={"Try it Yourself »"}
                     code={headingsExample}
                 />
             </div>
