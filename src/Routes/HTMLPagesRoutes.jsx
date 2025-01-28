@@ -15,7 +15,7 @@ import InputFormAttributes from '../pages/html/InputFormAttributes'
 import HTMLColors from '../pages/html/HTMLColors'
 import HTMLRGB from '../pages/html/HTMLRGB'
 import HTMLHEX from '../pages/html/HTMLHEX'
-import HTMLHSL from '../pages/html/HTMLHSl'
+import HTMLHSL from '../pages/html/HTMLHSL'
 
 const HTMLPagesRoutes = () => {
     return (
